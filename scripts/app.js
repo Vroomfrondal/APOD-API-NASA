@@ -17,6 +17,11 @@ const fetchNasaData = async () => {
     }
 }
 
-fetchNasaData()
-
 // Display data on our browser with function to update DOM
+const displayData = data => {
+    document.getElementById('title').textContent = data.title
+    document.getElementById('date').textContent = data.date
+    document.getElementById('picture').src = data.hdurl
+    document.getElementById('explanation').textContent = data.explanation
+}
+fetchNasaData
