@@ -1,7 +1,24 @@
 // Created By: Christopher DeLeon
 // Date: November 30th, 2021
 
+const url = 'https://api.nasa.gov/planetary/apod?api_key='
+const apiKey = config.NASA_API_KEY
 
+
+// How to fetch data
+function fetchData() {
+    try {
+        fetch(baseUrl+apiKey)
+        .then(response=>response.json())
+        .then(json=> {
+            console.log(json)
+        })
+    } catch(error) {
+        console.log(error)
+    }
+}
+
+fetchData()
 
 
 
