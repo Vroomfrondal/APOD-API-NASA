@@ -22,8 +22,8 @@ const fetchNasaData = async () => {
 const displayData = data => {
     document.getElementById('title').textContent = data.title
     document.getElementById('date').textContent = data.date
-    document.getElementById('picture').src = data.hdurl //data.hdurl
+    document.getElementById('video').src = data.hdurl //data.hdurl
     document.getElementById('explanation').textContent = data.explanation;
 }
 
-fetchNasaData();
+fetchNasaData()
