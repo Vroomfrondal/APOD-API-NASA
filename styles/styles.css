@@ -3,8 +3,13 @@
 
 
 /* Css Reset */
+*, body, header, h1, main, .title-section, #datepicker, .image-div, .video-div, #videoLink, .description-div, #description, .footer, .footer-heading, .footer ul, .footer-link, .list-non-bullet, .list-item-inline {
+    margin: 0;
+	padding: 0;
+	border: 0;
+}
 
-/* Css Reset */
+/* Begin Styling Rules */ 
 * {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Quicksand', sans-serif;
@@ -78,11 +83,6 @@ main {
     border-top-right-radius: 1rem;
     color: var(--yellow);
     text-align: center;
-}
-
-.footer-heading {
-    font-weight: bold;
-    font-size: large;
 }
 
 .footer-heading {
