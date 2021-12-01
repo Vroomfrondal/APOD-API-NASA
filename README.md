@@ -11,7 +11,7 @@ A web-based application to display a picture of the day provided by NASA's APOD 
 
 **Key Takeaways** 
 
-- Better understand of HTML5 marking & CSS styling, and JavaScript programming. 
+- Better understand of HTML5 marking, CSS styling, & JavaScript programming. 
 - Fetching from an Api and displaying that JS-object once fetched
 - DOM manipulation
 - Ignoring Private API keys in Github source code with config.js files
