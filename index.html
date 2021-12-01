@@ -2,42 +2,33 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="images/favicon.ico">
-        <link rel="icon" type="images/png" sizes="32x32" href="images/favicon.png">
-        <link rel="stylesheet" href="styles/styles.css">
-        <title>NASA APOD App</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="images/png" sizes="32x32" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>NASA APOD App</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Astronomical Picture of the Day</h1>
 
-    </head>
-    <body>
-        <main class="container">
-            <h1>NASA's Astronomy Picture of the Day</h1>
-            
-            <div class="intro">
-                <p>Discover the <a href="https://apod.nasa.gov/apod/archivepix.html">Cosmos</a>! Each day this web application will generate a new photo of the cosmos provided by Nasa's open APOD API project, as well as a description of the photograph authored by a planetary scientist.</p>
-            </div>
-            
-            <h2 id="title"></h2>
-            <p id="date">/p>
-                <section class="picture-explanation-container">
-                    <img src="" id="picture" alt="astronomy image by NASA APOD Api" />
-                    <p id="explanation"></p>
-                </section>
-            
-            <section class="video">
-                <iframe src="" id="video" alt="astronomy video by NASA APOD Api"></iframe>
-                <p id="explanation"></p>
-            </section>
-        
-        </main>
-    
-        <script type="text/javascript" src="scripts/config.js"></script>
-        <script src="scripts/app.js"></script>
-    </body>
+            <form>
+                <label for="datepicker">Pick a date:
+                    <input id="datepicker" type="date" min="" max="" >
+
+                </label>
+            </form>
+        </header>
+    </main>
+</body>
+
+     
+     
 </html>
