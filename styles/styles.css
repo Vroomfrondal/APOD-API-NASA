@@ -2,12 +2,12 @@
 /* Date: November 29, 2021 */
 
 
-/* Css Reset */
-*, body, header, h1, main, .title-section, #datepicker, .image-div, .video-div, #videoLink, .description-div, #description, .footer, .footer-heading, .footer ul, .footer-link, .list-non-bullet, .list-item-inline {
+/* Css Reset
+body, header, h1, main {
     margin: 0;
 	padding: 0;
 	border: 0;
-}
+}  */
 
 /* Begin Styling Rules */ 
 * {
