@@ -49,9 +49,25 @@ main {
     border-radius: 0.5rem;
 }
 
+input[type="date" i] {
+    align-items: center;
+    display: -webkit-inline-flex;
+    font-family: monospace;
+    padding-inline-start: 1px;
+    cursor: default;
+    overflow: hidden;
+    padding: 0px;
+}
+
+
+
 .image-div {
-    width: 80%;
+    width: 100%;
     margin: auto;
+}
+
+#image_of_the_day {
+    width: 100%;
 }
 
 .video-div {
@@ -77,7 +93,9 @@ main {
     line-height: 1.82;
 }
 
+
 /* Footer */
+
 .footer {
     padding: 4rem 1rem;
     background-color: var(--primary-color);
