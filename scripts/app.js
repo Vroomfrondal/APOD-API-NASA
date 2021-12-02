@@ -4,22 +4,34 @@
 const url = 'https://api.nasa.gov/planetary/apod?api_key='
 const apiKey = config.NASA_API_KEY
 
+//Fetch data: method 1
+//function fetchData() {
+//    try {
+//        fetch(url+apiKey)
+//        .then(response=>response.json())
+//        .then(json=> {
+//            console.log(json)
+//        })
+//    } catch(error) {
+//        console.log(error)
+//    }
+//}
 
-// How to fetch data
-function fetchData() {
+//fetchData()
+
+// Fetch data: method 2
+const fetchData = async () => {
     try {
-        fetch(baseUrl+apiKey)
-        .then(response=>response.json())
-        .then(json=> {
-            console.log(json)
-        })
-    } catch(error) {
+        const response = await fetch(`${url}${apiKey}`)
+        const data = await response.json()
+        console.log('NASA APOD Data', data)
+        displayData(data);
+    } catch (error) {
         console.log(error)
     }
 }
 
 fetchData()
-
 
 
 
