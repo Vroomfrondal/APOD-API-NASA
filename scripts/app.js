@@ -10,7 +10,7 @@ function fetchData() {
         fetch(url+apiKey)
         .then(response=>response.json())
         .then(json=> {
-            console.log(json)
+            console.log('NASA Data:', json)
         displayData(json)
         })
     } catch(error) {
@@ -38,7 +38,7 @@ function displayData(data) {
         <img id="image_of_the_day" src="" alt="image-by-nasa">
         </div>
         </a>`
-    const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
+    const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>` // img src cannot be blank
 
 
     if(data.media_type == "video") {
@@ -47,7 +47,7 @@ function displayData(data) {
     } else {
         mediaSection.innerHTML = imageSection;
         document.getElementById("hdimg").href = data.hdurl
-        document.getElementById("image_of_the_day").srf = data.url
+        document.getElementById("image_of_the_day").src = data.url
     }
 
     
@@ -55,10 +55,6 @@ function displayData(data) {
     information.innerHTML = data.explanation
 
 }
-
-
-
-
 
 
 
