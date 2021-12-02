@@ -62,9 +62,10 @@ input[type="date" i] {
 
 
 .image-div {
-    width: 100%;
-    margin: auto;
+    width: 85%;
+    margin:1rem auto 1rem;
     outline: solid 1px white;
+    
 }
 
 #image_of_the_day {
