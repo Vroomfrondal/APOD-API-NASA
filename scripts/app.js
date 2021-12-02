@@ -5,40 +5,56 @@ const url = 'https://api.nasa.gov/planetary/apod?api_key='
 const apiKey = config.NASA_API_KEY
 
 //Fetch data: method 1
-//function fetchData() {
-//    try {
-//        fetch(url+apiKey)
-//        .then(response=>response.json())
-//        .then(json=> {
-//            console.log(json)
-//        })
-//    } catch(error) {
-//        console.log(error)
-//    }
-//}
-//fetchData()
-
-// Fetch data: method 2
-const fetchData = async () => {
+function fetchData() {
     try {
-        const response = await fetch(`${url}${apiKey}`)
-        const data = await response.json()
-        console.log('NASA APOD Data', data)
-        displayData(data); // displays data from displayData
-    } catch (error) {
+        fetch(url+apiKey)
+        .then(response=>response.json())
+        .then(json=> {
+            console.log(json)
+        displayData(json)
+        })
+    } catch(error) {
         console.log(error)
     }
 }
-
-const displayData = data => {
-    document.getElementById('title').textContent = data.title
-    document.getElementById('date').textContent = data.date
-    document.getElementById('picture').src = data.hdurl
-    document.getElementById('description').textContent = data.explanation
-}
-
 fetchData()
 
+const title = document.querySelector("#title");
+const copyright = document.querySelector("#copyright");
+const mediaSection = document.querySelector("#media-section");
+const information = document.querySelector("#description");
+
+function displayData(data) {
+    title.innerHTML = data.title
+
+    if(data.hasOwnProperty("copyright")) {
+        copyright.innerHTML = data.copyright;
+    } else {
+        copyright.innerHTML = ""
+    }
+
+    const imageSection = `<a id="hdimg" href="" target="-blank">
+        <div class="image-div">
+        <img id="image_of_the_day" src="" alt="image-by-nasa">
+        </div>
+        </a>`
+    const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
+
+
+    if(data.media_type == "video") {
+        mediaSection.innerhtml = videoSection;
+        document.getElementById("videoLink").src = data.url
+    } else {
+        mediaSection.innerHTML = imageSection;
+        document.getElementById("hdimg").href = data.hdurl
+        document.getElementById("image_of_the_day").srf = data.url
+    }
+
+    
+
+    information.innerHTML = data.explanation
+
+}
 
 
 
@@ -47,53 +63,23 @@ fetchData()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Created By: Christopher DeLeon
-// Date: November 29, 2021
-
-
-// Global Variables
-//const url = 'https://api.nasa.gov/planetary/apod?api_key='
-//const api_key = config.NASA_API_KEY
-//
-////Request using fetch method, await response and parse JSON response into JavaScript Object
-//const fetchNasaData = async () => {
+// Fetch data: method 2
+//const fetchData = async () => {
 //    try {
-//        const response = await fetch(`${url}${api_key}`)
+//        const response = await fetch(`${url}${apiKey}`)
 //        const data = await response.json()
-//        console.log('NASA APOD data', data)
-//        displayData(data);
+//        console.log('NASA APOD Data', data)
+//        displayData(data); // displays data from displayData
 //    } catch (error) {
 //        console.log(error)
 //    }
-//};
+//}
 //
-//// Display data on our browser with function to update DOM
 //const displayData = data => {
 //    document.getElementById('title').textContent = data.title
 //    document.getElementById('date').textContent = data.date
-//    document.getElementById('picture').src = data.hdurl //data.hdurl
-//    document.getElementById('explanation').textContent = data.explanation;
+//    document.getElementById('picture').src = data.hdurl
+//    document.getElementById('description').textContent = data.explanation
 //}
 //
-//fetchNasaData()
-//
+//fetchData()
