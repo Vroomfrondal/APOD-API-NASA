@@ -16,7 +16,6 @@ const apiKey = config.NASA_API_KEY
 //        console.log(error)
 //    }
 //}
-
 //fetchData()
 
 // Fetch data: method 2
@@ -25,13 +24,23 @@ const fetchData = async () => {
         const response = await fetch(`${url}${apiKey}`)
         const data = await response.json()
         console.log('NASA APOD Data', data)
-        displayData(data);
+        displayData(data); // displays data from displayData
     } catch (error) {
         console.log(error)
     }
 }
 
+const displayData = data => {
+    document.getElementById('title').textContent = data.title
+    document.getElementById('date').textContent = data.date
+    document.getElementById('picture').src = data.hdurl
+    document.getElementById('description').textContent = data.explanation
+}
+
 fetchData()
+
+
+
 
 
 
