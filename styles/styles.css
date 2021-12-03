@@ -38,18 +38,19 @@ main {
 }
 
 .title-section {
-    padding: 1rem;
+    padding: 15em;
     border-top: 5rem;
 }
 
-
+/* Style Rules for Datepicker box */
 #datepicker {
     box-sizing: border-box;
     width: 9rem;
-    padding: 0.2rem;
+    padding: 0.rem;
     border-radius: 0.5rem;
 }
 
+/* Style Rules for datepicker input */
 input[type="date" i] {
     align-items: center;
     display: -webkit-inline-flex;
@@ -60,19 +61,19 @@ input[type="date" i] {
     padding: 0px;
 }
 
+/* Style Rules for Media Courtsey string */
 #credits-wrapper {
-    opacity: 60%;
+    opacity: ;
     font-size: 12px;
     margin: 5px;
 }
 
+/* Style Rules for image author API response object */
 #copyright {
-    opacity: 60%;
     font-size: 12px;
 }
 
-
-
+ /* Style Rules for Media Courtsey string */
 .image-div {
     width: 75%;
     margin:1rem auto 1rem;
