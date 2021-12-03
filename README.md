@@ -6,8 +6,7 @@ A web-based application to display a picture of the day provided by NASA's APOD 
 - HTML 5
 - CSS
 - Javascript
-- Vscode
-- Git
+- Github
 
 **Key Takeaways** 
 - Better understanding of HTML5 marking, CSS styling, & JavaScript programming. 
