@@ -33,7 +33,7 @@ function displayData(data) {
         copyright.innerHTML = ""
     }
 
-    const imageSection = `<a id="hdimg" href="" target="-blank">
+    const imageSection = `<a id="hdimg" href="" target="_blank">
         <div class="image-div"> 
         <img id="image_of_the_day" src="" alt="image-by-nasa"> 
         </div>
