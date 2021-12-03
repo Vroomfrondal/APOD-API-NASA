@@ -60,13 +60,23 @@ input[type="date" i] {
     padding: 0px;
 }
 
+#credits-wrapper {
+    opacity: 60%;
+    font-size: 12px;
+    margin: 5px;
+}
+
+#copyright {
+    opacity: 60%;
+    font-size: 12px;
+}
+
 
 
 .image-div {
     width: 75%;
     margin:1rem auto 1rem;
     outline: solid 1px white;
-    
 }
 
 #image_of_the_day {
