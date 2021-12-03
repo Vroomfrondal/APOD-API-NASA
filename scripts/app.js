@@ -34,11 +34,11 @@ function displayData(data) {
     }
 
     const imageSection = `<a id="hdimg" href="" target="-blank">
-        <div class="image-div">
-        <img id="image_of_the_day" src="" alt="image-by-nasa">
+        <div class="image-div"> 
+        <img id="image_of_the_day" src="" alt="image-by-nasa"> 
         </div>
         </a>`
-    const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>` // img src cannot be blank
+    const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
 
 
     if(data.media_type == "video") {
