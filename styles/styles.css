@@ -133,3 +133,7 @@ input[type="date" i] {
     display: inline;
     margin: 0rem 0.5rem;
 }
+
+.footer p {
+    font-size: 10px;
+}
