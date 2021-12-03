@@ -9,7 +9,7 @@ const title = document.querySelector("#title")
 const copyright = document.querySelector("#copyright")
 const mediaSection = document.querySelector("#media-section")
 const information = document.querySelector("#description")
-const currentDate = new Date().toISOString().slice(0, 10); // this breaks the website
+const currentDate = new Date().toISOString().slice(0, 10)
 
 const imageSection = `<a id="hdimg" href="" target="_blank">
 <div class="image-div"> 
@@ -45,18 +45,18 @@ function displayData(data) {
         copyright.innerHTML = ""
     }
 
-    dateInput.innerHTML = (data.date)
-    dateInput.max = (currentDate)
+    date.innerHTML = data.date
+    dateInput.max = currentDate
     dateInput.min = ("1995-06-16")
 
-    if(data.media_type == "video") {
-        mediaSection.innerhtml = videoSection;
-        document.getElementById("videoLink").src = data.url
-    } else {
-        mediaSection.innerHTML = imageSection;
-        document.getElementById("hdimg").href = data.hdurl
-        document.getElementById("image_of_the_day").src = data.url
-    }
+        if(data.media_type == "video") {
+            mediaSection.innerHTML = videoSection;
+            document.getElementById("videoLink").src = data.url
+        } else {
+            mediaSection.innerHTML = imageSection;
+            document.getElementById("hdimg").href = data.hdurl
+            document.getElementById("image_of_the_day").src = data.url
+        }
     information.innerHTML = data.explanation
 }
 fetchData()
@@ -69,7 +69,7 @@ dateInput.addEventListener('change', (e) => {
     nasaRequested();
 })
 
-nasaRequested().onload;
+nasaRequested()
 
 
 
