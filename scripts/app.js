@@ -3,6 +3,19 @@
 
 const url = 'https://api.nasa.gov/planetary/apod?api_key='
 const apiKey = config.NASA_API_KEY
+const title = document.querySelector("#title")
+const copyright = document.querySelector("#copyright")
+const mediaSection = document.querySelector("#media-section")
+const information = document.querySelector("#description")
+const dateInput = document.querySelector("#datepicker")
+
+
+const imageSection = `<a id="hdimg" href="" target="_blank">
+<div class="image-div"> 
+<img id="image_of_the_day" src="" alt="image-by-nasa"> 
+</div>
+</a>`
+const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
 
 //Fetch data: method 1
 function fetchData() {
@@ -19,11 +32,6 @@ function fetchData() {
 }
 fetchData()
 
-const title = document.querySelector("#title");
-const copyright = document.querySelector("#copyright");
-const mediaSection = document.querySelector("#media-section");
-const information = document.querySelector("#description");
-
 function displayData(data) {
     title.innerHTML = data.title
 
@@ -33,12 +41,9 @@ function displayData(data) {
         copyright.innerHTML = ""
     }
 
-    const imageSection = `<a id="hdimg" href="" target="_blank">
-        <div class="image-div"> 
-        <img id="image_of_the_day" src="" alt="image-by-nasa"> 
-        </div>
-        </a>`
-    const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
+   
+
+    let newDate = "&date=" + dateInput.value + "&";
 
 
     if(data.media_type == "video") {
@@ -50,10 +55,7 @@ function displayData(data) {
         document.getElementById("image_of_the_day").src = data.url
     }
 
-    
-
     information.innerHTML = data.explanation
-
 }
 
 
