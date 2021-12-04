@@ -1,5 +1,5 @@
 # APOD-API-NASA
-A web-based application to display a picture of the day provided by NASA's APOD open API.
+A web-based application to display a picture of the day provided by NASA's APOD open API. Or you can choose a date from the past. The App works for both images and videos
 
 **Technologies Used:**
 - Nasa APOD open API which can be found at https://api.nasa.gov/
