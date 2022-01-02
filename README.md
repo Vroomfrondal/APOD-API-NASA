@@ -26,3 +26,10 @@ A web-based application to display a picture of the day provided by NASA's APOD 
 - https://sophiali.dev/javascript-fetch-api-with-nasa-api
 
 - https://www.youtube.com/watch?v=hk1ohonv4mk&t=1s
+
+**Dev Steps if Cloning:**
+
+- You will have to generate your [your own api key](https://api.nasa.gov/) via the NASA website (since my key isn't on github, your app won't work when pulling it)s
+- Create a file called "config.js" located the scripts folder
+- Initialize a variable called NASA_API_KEY = "Paste your personal key"
+- Your pulled version should be functional
