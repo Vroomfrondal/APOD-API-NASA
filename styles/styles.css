@@ -1,6 +1,5 @@
-/* Created By: Christopher DeLeon */ 
+/* Created By: Christopher DeLeon */
 /* Date: November 29, 2021 */
-
 
 /* Css Reset
 body, header, h1, main {
@@ -9,11 +8,11 @@ body, header, h1, main {
 	border: 0;
 }  */
 
-/* Begin Styling Rules */ 
+/* Begin Styling Rules */
 * {
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-    --primary-color:#171717;
+    font-family: "Open Sans", sans-serif;
+    font-family: "Quicksand", sans-serif;
+    --primary-color: #171717;
 }
 
 body {
@@ -46,7 +45,7 @@ main {
 #datepicker {
     box-sizing: border-box;
     width: 9rem;
-    padding: 0.rem;
+    padding: 0rem;
     border-radius: 0.5rem;
 }
 
@@ -72,16 +71,16 @@ input[type="date" i] {
     font-size: 12px;
 }
 
- /* Style Rules for Media Courtsey string */
+/* Style Rules for Media Courtsey string */
 .image-div {
     width: 75%;
-    margin:1rem auto 1rem;
+    margin: 1rem auto 1rem;
     outline: solid 1px white;
 }
 
 #image_of_the_day {
     width: 100%;
-    height: 10%
+    height: 10%;
 }
 
 .video-div {
@@ -92,7 +91,6 @@ input[type="date" i] {
 #videoLink {
     width: 100%;
     height: 70vh;
-
 }
 
 .description-div {
@@ -100,13 +98,12 @@ input[type="date" i] {
     margin: 0.1rem auto 1rem;
     border: solid 1px white;
     padding: 0.5rem;
-    border-radius: 00.5rem;
+    border-radius: 0.5rem;
 }
 
 #description {
     line-height: 1.82;
 }
-
 
 /* Footer */
 
