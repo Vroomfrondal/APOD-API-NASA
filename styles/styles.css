@@ -75,13 +75,12 @@ input[type="date" i] {
 .image-div {
     width: 75%;
     margin: 1rem auto 1rem;
-    outline: solid 1px white;
-    max-width: 1000px;
 }
 
 #image_of_the_day {
     width: 100%;
-    height: auto;
+    height: 10%;
+    outline: solid 1px white;
 }
 
 .video-div {
