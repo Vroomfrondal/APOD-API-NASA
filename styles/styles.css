@@ -108,6 +108,12 @@ input[type="date" i] {
     line-height: 1.82;
 }
 
+@media (min-width: 1025px) {
+    .image-div {
+        max-width: 1000px;
+    }
+}
+
 /* Footer */
 
 .footer {
