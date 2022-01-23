@@ -67,6 +67,13 @@ dateInput.addEventListener("change", (e) => {
     nasaRequested()
 })
 
+// wait for window event
+// window.addEventListener("keydown", (event) => {
+//     if (event.key === "a") {
+//         nasaRequested()
+//     }
+// })
+
 nasaRequested()
 
 // Fetch data: method 2
