@@ -67,32 +67,4 @@ dateInput.addEventListener("change", (e) => {
     nasaRequested()
 })
 
-// wait for window event
-// window.addEventListener("keydown", (event) => {
-//     if (event.key === "a") {
-//         nasaRequested()
-//     }
-// })
-
 nasaRequested()
-
-// Fetch data: method 2
-//const fetchData = async () => {
-//    try {
-//        const response = await fetch(`${url}${apiKey}`)
-//        const data = await response.json()
-//        console.log('NASA APOD Data', data)
-//        displayData(data); // displays data from displayData
-//    } catch (error) {
-//        console.log(error)
-//    }
-//}
-//
-//const displayData = data => {
-//    document.getElementById('title').textContent = data.title
-//    document.getElementById('date').textContent = data.date
-//    document.getElementById('picture').src = data.hdurl
-//    document.getElementById('description').textContent = data.explanation
-//}
-//
-//fetchData()
