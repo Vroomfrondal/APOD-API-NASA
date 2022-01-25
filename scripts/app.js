@@ -8,7 +8,7 @@ function nasaRequested() {
     const copyright = document.querySelector("#copyright")
     const mediaSection = document.querySelector("#media-section")
     const information = document.querySelector("#description")
-    const currentDate = new Date().toISOString().slice(0, 10)
+    let currentDate = new Date().toISOString().slice(0, 10)
 
     const imageSection = `<a id="hdimg" href="" target="_blank" rel="noopener">
 <div class="image-div"> 
@@ -58,6 +58,31 @@ function nasaRequested() {
         information.innerHTML = data.explanation
     }
     fetchData()
+
+    // change fetchData() to fetch API object with random date when HTML button is pressed (instead of todays date)
+    document.querySelector("#random-day-generator").addEventListener("click", () => {
+        function fetchData() {
+            //utility function to generate a random date after 2010 (before 2010 causes bugs)
+            function randomDate(start, end) {
+                return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
+            }
+            let randomRolledDate = randomDate(new Date(2010, 0, 1), new Date())
+            randomRolledDate = "&date=" + randomRolledDate.toISOString().slice(0, 10) + "&"
+
+            try {
+                //new API response
+                fetch(url + apiKey + randomRolledDate)
+                    .then((response) => response.json())
+                    .then((json) => {
+                        console.log("NASA Data:", json)
+                        displayData(json)
+                    })
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData()
+    })
 }
 
 // Check if calendar day has been inputted and update if so
