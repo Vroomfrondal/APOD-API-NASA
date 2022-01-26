@@ -24,7 +24,7 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
+    padding: -1rem;
 }
 
 h1 {
@@ -37,7 +37,7 @@ main {
 }
 
 .title-section {
-    padding: 15em;
+    padding: 13em;
     border-top: 5rem;
 }
 
@@ -69,6 +69,7 @@ input[type="date" i] {
 /* Style Rules for image author API response object */
 #copyright {
     font-size: 12px;
+    margin-bottom: 0.3em;
 }
 
 /* Style Rules for Media Courtsey string */
@@ -155,6 +156,7 @@ input[type="date" i] {
 .button-container > .random-picture-button {
     margin-left: 0em;
     margin-top: 0.5em;
+    margin-bottom: 0.1em;
 }
 
 .random-picture-button,
@@ -214,5 +216,3 @@ input[type="date" i] {
 .reset-picture-button:active {
     top: 1px;
 }
-
-/* Reset Button Styling & Animation*/
