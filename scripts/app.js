@@ -74,6 +74,7 @@ function nasaRequested() {
                 fetch(url + apiKey + randomRolledDate)
                     .then((response) => response.json())
                     .then((json) => {
+                        console.log(`Fetching random day... ${json.date}`)
                         console.log("NASA Data:", json)
                         displayData(json)
                     })
@@ -81,6 +82,12 @@ function nasaRequested() {
                 console.log(error)
             }
         }
+        fetchData()
+    })
+
+    // Call current day on reset-button click
+    document.getElementById("reset-button").addEventListener("click", () => {
+        console.log("Fetching today...")
         fetchData()
     })
 }
