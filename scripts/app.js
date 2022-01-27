@@ -40,7 +40,7 @@ function nasaRequested() {
         if (data.hasOwnProperty("copyright")) {
             copyright.innerHTML = data.copyright
         } else {
-            copyright.innerHTML = "N/A"
+            copyright.innerHTML = "NASA"
         }
 
         date.innerHTML = data.date
