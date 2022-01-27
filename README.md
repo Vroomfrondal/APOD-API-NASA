@@ -22,6 +22,7 @@ A web-based application to display a picture of the day provided by NASA's APOD 
 -   How to dynamically populate an HTML section element depending on an API's object response
 
 **Sample Photo**
+![Screenshot (58)](https://user-images.githubusercontent.com/49052244/151297835-3ce41659-aa3f-4ec8-9c5b-2ee0137ed3fe.png)
 
 **References:**
 
