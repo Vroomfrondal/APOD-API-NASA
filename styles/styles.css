@@ -17,18 +17,25 @@ body, header, h1, main {
 
 body {
     margin: 0;
+    background-image: url("../images/bg1.jpg");
     background-color: var(--primary-color);
+    background-size: contain;
     color: white;
+    width: 100%;
 }
 
 header {
-    background-color: var(--primary-color);
     color: white;
     padding: -1rem;
 }
 
+.title-wrapper {
+    background-color: black;
+}
+
 h1 {
     font-weight: 500;
+    background-color: black;
 }
 
 main {
@@ -39,6 +46,10 @@ main {
 .title-section {
     padding: 13em;
     border-top: 5rem;
+}
+
+#title {
+    background-color: black;
 }
 
 /* Style Rules for Datepicker box */
@@ -64,12 +75,14 @@ input[type="date" i] {
 #credits-wrapper {
     font-size: 12px;
     margin: 5px;
+    background-color: black;
 }
 
 /* Style Rules for image author API response object */
 #copyright {
     font-size: 12px;
     margin-bottom: 0.3em;
+    background-color: black;
 }
 
 /* Style Rules for Media Courtsey string */
@@ -100,10 +113,12 @@ input[type="date" i] {
     border: solid 1px white;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    background-color: black;
 }
 
 #description {
     line-height: 1.82;
+    background-color: black;
 }
 
 @media (min-width: 1025px) {
@@ -116,7 +131,6 @@ input[type="date" i] {
 
 .footer {
     padding: 4rem 1rem;
-    background-color: var(--primary-color);
     border-top-right-radius: 1rem;
     color: var(--yellow);
     text-align: center;
@@ -136,6 +150,7 @@ input[type="date" i] {
     padding: 0.5rem 1rem;
     text-decoration: none;
     margin: 0.5rem 1rem;
+    background-color: black;
 }
 
 .list-non-bullet {
