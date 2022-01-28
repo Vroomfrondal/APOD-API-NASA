@@ -11,10 +11,10 @@ function nasaRequested() {
     let currentDate = new Date().toISOString().slice(0, 10)
 
     const imageSection = `<a id="hdimg" href="" target="_blank" rel="noopener">
-<div class="image-div"> 
-<img id="image_of_the_day" src="" alt="image-by-nasa"> 
-</div>
-</a>`
+                            <div class="image-div"> 
+                            <img id="image_of_the_day" src="" alt="image-by-nasa"> 
+                            </div>
+                          </a>`
     const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
 
     let newDate = "&date=" + dateInput.value + "&"
