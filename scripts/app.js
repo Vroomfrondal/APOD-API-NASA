@@ -9,14 +9,12 @@ function nasaRequested() {
     const mediaSection = document.querySelector("#media-section")
     const information = document.querySelector("#description")
     let currentDate = new Date().toISOString().slice(0, 10)
-
     const imageSection = `<a id="hdimg" href="" target="_blank" rel="noopener">
                             <div class="image-div"> 
                             <img id="image_of_the_day" src="" alt="image-by-nasa"> 
                             </div>
                           </a>`
     const videoSection = `<div class="video-div"> <iframe id="videoLink" src="" frameborder="0"></iframe></div>`
-
     let newDate = "&date=" + dateInput.value + "&"
 
     //Fetch data: method 1
@@ -59,7 +57,7 @@ function nasaRequested() {
     }
     fetchData()
 
-    // change fetchData() to fetch API object with random date when HTML button is pressed (instead of todays date)
+    // mutate fetchData() to fetch API object with random date when HTML button is pressed (instead of todays date)
     document.querySelector("#random-day-generator").addEventListener("click", () => {
         function fetchData() {
             //utility function to generate a random date after 2010 (before 2010 causes bugs)
@@ -74,7 +72,7 @@ function nasaRequested() {
                 fetch(url + apiKey + randomRolledDate)
                     .then((response) => response.json())
                     .then((json) => {
-                        console.log(`Fetching random day... ${json.date}`)
+                        console.log(`Fetching random day...`)
                         console.log("NASA Data:", json)
                         displayData(json)
                     })
