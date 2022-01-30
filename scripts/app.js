@@ -35,6 +35,12 @@ function nasaRequested() {
     function displayData(data) {
         title.innerHTML = data.title
 
+        if (data.code == 500) {
+            window.alert("Nasa seems to be having an issue with their server. Perhaps try another time.")
+            console.log("Stopped nasa requests.")
+            return
+        }
+
         if (data.hasOwnProperty("copyright")) {
             copyright.innerHTML = data.copyright
         } else {
