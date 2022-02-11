@@ -32,7 +32,7 @@ function nasaRequested() {
     }
 
     // Display data object in Browser that is returned from API
-    function displayData(data) {
+    const displayData = (data) => {
         title.innerHTML = data.title
 
         if (data.code == 500) {
