@@ -1,0 +1,23 @@
+{
+  "name": "apod-api-nasa",
+  "version": "1.0.0",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/434fa586-d65c-42e1-bf98-f988a3f6c29a/deploy-status)](https://app.netlify.com/sites/apod-api-application/deploys)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vroomfrondal/APOD-API-NASA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vroomfrondal/APOD-API-NASA/issues"
+  },
+  "homepage": "https://github.com/Vroomfrondal/APOD-API-NASA#readme",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  }
+}
