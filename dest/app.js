@@ -86,7 +86,6 @@ const nasaRequested = () => {
         fetchData();
     });
     resetButtonEl.addEventListener('click', () => {
-        console.log('Fetching today...');
         fetchData();
     });
     // Update if user enters specific calendar day

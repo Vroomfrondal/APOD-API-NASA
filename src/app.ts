@@ -16,7 +16,7 @@ const nasaRequested = () => {
     }
 
     // Display data object in Browser that is returned from API
-    const displayData = (data) => {
+    const displayData = (data: { date: string; explanation: string; hdurl: string; media_type: string; title: string; url: string; copyright: string }) => {
         const date = document.querySelector<HTMLParagraphElement>('#date')!
         const title = document.querySelector<HTMLHeadingElement>('#title')!
         const copyright = document.querySelector<HTMLElement>('#copyright')!
@@ -63,6 +63,7 @@ const nasaRequested = () => {
             const randomDate = (start, end) => {
                 return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
             }
+
             let randomRolledDate = randomDate(new Date(2010, 0, 1), new Date())
 
             randomRolledDate = '&date=' + randomRolledDate.toISOString().slice(0, 10) + '&'
@@ -79,7 +80,6 @@ const nasaRequested = () => {
     })
 
     resetButtonEl.addEventListener('click', () => {
-        console.log('Fetching today...')
         fetchData()
     })
 
