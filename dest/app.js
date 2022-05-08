@@ -11,41 +11,36 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const nasaRequested = () => {
     const url = 'https://api.nasa.gov/planetary/apod?api_key=';
     const apiKey = config.NASA_API_KEY;
-    const title = document.querySelector('#title');
-    const copyright = document.querySelector('#copyright');
-    const mediaSection = document.querySelector('#media-section');
-    const information = document.querySelector('#description');
     const dateInput = document.querySelector('#datepicker');
     const resetButtonEl = document.querySelector('#reset-button');
     const randomButtonEl = document.querySelector('#random-day-generator');
-    const currentDate = new Date().toISOString().slice(0, 10);
     const newDate = ('&date=' + (dateInput === null || dateInput === void 0 ? void 0 : dateInput.value) + '&');
-    const imageSection = `<a id="hdimg" href="" target="_blank" rel="noopener">
-                            <div class="image-div"> 
-                                <img id="image_of_the_day" src="" alt="image-by-nasa"> 
-                            </div>
-                          </a>`;
-    const videoSection = `<div class="video-div"> 
-                            <iframe id="videoLink" src="" frameborder="0"></iframe>
-                          </div>`;
     const fetchData = () => __awaiter(void 0, void 0, void 0, function* () {
-        try {
-            const apiResponse = yield fetch(url + apiKey + newDate);
-            if (apiResponse.status === 200) {
-                const data = yield apiResponse.json();
-                console.log('NASA Data:', data);
-                displayData(data);
-            }
-            else
-                alert('Nasa seems to be having an issue with their servers right now.');
+        const apiResponse = yield fetch(url + apiKey + newDate);
+        if (apiResponse.status === 200) {
+            const data = yield apiResponse.json();
+            console.log('NASA Data:', data);
+            displayData(data);
         }
-        catch (error) {
-            console.log(error);
-            alert(error);
-        }
+        else
+            alert('Nasa seems to be having an issue with their servers right now.');
     });
     // Display data object in Browser that is returned from API
     const displayData = (data) => {
+        const date = document.querySelector('#date');
+        const title = document.querySelector('#title');
+        const copyright = document.querySelector('#copyright');
+        const information = document.querySelector('#description');
+        const currentDate = new Date().toISOString().slice(0, 10);
+        const mediaSection = document.querySelector('#media-section');
+        const imageSection = `<a id="hdimg" href="" target="_blank" rel="noopener">
+                                <div class="image-div"> 
+                                    <img id="image_of_the_day" src="" alt="image-by-nasa"> 
+                                </div>
+                              </a>`;
+        const videoSection = `<div class="video-div"> 
+                                <iframe id="videoLink" src="" frameborder="0"></iframe>
+                              </div>`;
         // Title, Date, and media-description
         title.innerHTML = data.title;
         date.innerHTML = data.date;
@@ -66,8 +61,8 @@ const nasaRequested = () => {
         }
         else {
             mediaSection.innerHTML = imageSection;
-            document.getElementById('hdimg').href = data.hdurl;
-            document.getElementById('image_of_the_day').src = data.url;
+            document.querySelector('#hdimg').href = data.hdurl;
+            document.querySelector('#image_of_the_day').src = data.url;
         }
     };
     randomButtonEl.addEventListener('click', () => {
@@ -79,20 +74,14 @@ const nasaRequested = () => {
             let randomRolledDate = randomDate(new Date(2010, 0, 1), new Date());
             randomRolledDate = '&date=' + randomRolledDate.toISOString().slice(0, 10) + '&';
             // fetch with a random date instead of today.
-            try {
-                const apiResponse = yield fetch(url + apiKey + randomRolledDate);
-                if (apiResponse.status === 200) {
-                    const data = yield apiResponse.json();
-                    console.log('NASA Data:', data);
-                    displayData(data);
-                }
-                else
-                    alert('Nasa seems to be having an issue with their servers right now.');
+            const apiResponse = yield fetch(url + apiKey + randomRolledDate);
+            if (apiResponse.status === 200) {
+                const data = yield apiResponse.json();
+                console.log('NASA Data:', data);
+                displayData(data);
             }
-            catch (error) {
-                console.log(error);
-                alert(error);
-            }
+            else
+                alert('Nasa seems to be having an issue with their servers right now.');
         });
         fetchData();
     });
